@@ -11,7 +11,10 @@
   border-radius: 5px;
 
   height: 200px;
-  width: 60vw;
+  width: 80vw;
+  &:hover{
+    cursor: pointer;
+  }
 
   .image {
     margin: 20px;
@@ -33,7 +36,6 @@
     }
 
     .body {
-      width: 400px;
       display: flex;
       flex-direction: row;
       align-items: center;

@@ -10,6 +10,7 @@ import {HttpLoadingInterceptor} from "./services/http-loading.interceptor";
 import {AuthService} from "./services/auth.service";
 import {ProductModule} from "./component/product/product.module";
 import {SharedModule} from "./shared.module";
+import {APP_BASE_HREF, HashLocationStrategy, LocationStrategy} from "@angular/common";
 
 
 @NgModule({
@@ -34,6 +35,8 @@ import {SharedModule} from "./shared.module";
       useClass: HttpLoadingInterceptor,
       multi: true
     },
+    {provide: APP_BASE_HREF, useValue: '/'},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

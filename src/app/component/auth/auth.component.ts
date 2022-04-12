@@ -30,6 +30,7 @@ export class AuthComponent implements  OnDestroy {
       this.authService.register(value).pipe(
         take(1)
       ).subscribe(() => {
+        this.loginForm.reset();
         this.successMessages = "You registration success, please enter in your account";
        });
     }

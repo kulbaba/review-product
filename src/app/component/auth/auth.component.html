@@ -16,7 +16,7 @@
       >
     </div>
 
-    <div class="message"  [class.error]= "!!errorMessages" [class.succsess]="!!successMessages" >
+    <div class="message" [class.error]= "!!errorMessages" [class.success]="!!successMessages" >
       <span *ngIf="errorMessages">{{errorMessages.message}}
       </span>
       <span *ngIf="successMessages">{{successMessages}} <a (click)="isRegister = false"> LogIn</a>
